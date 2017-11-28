@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>个人设置功能实现</title>
+</head>
+<body>
+  <div class="logo">
+    <img src="logo.png" >
+  </div>
+  <div class="side-bar">
+    <ul>
+    <li><a href="#" class="item" id="menue1">调度管理</a></li>
+    <li><a href="#" class="item" id="menue2">短信平台</a></li>
+    <li><a href="#" class="item" id="menue3">资源维护</a></li>
+    <li><a href="#" class="item" id="menue4">系统管理</a>
+        <ul>
+          <li class="sub-menue"><a href="#" id="sysdic">系统字典</a></li>
+          <li class="sub-menue" ><a href="#" id="funlist">功能列表</a></li>
+          <li class="sub-menue" ><a href="#" id="department-maintenance">部门维护</a></li>
+          <li class="sub-menue" ><a href="#" id="personal-maintenance">人员维护</a></li>
+          <li class="sub-menue" ><a href="#" id="personal-setting">个人设置</a></li>
+        </ul>
+    </li>
+    </ul>
+  </div>
+  <div class="content">
+    <table class="setting">
+      <tbody>
+        <tr id="name">
+          <th>姓名</th>
+          <td><input type="text" value="admin" disabled="disabled"></td>
+        </tr>
+        <tr id="forepass">
+          <th>原密码</th>
+          <td><input type="password" value=""></td>
+        </tr>
+        <tr id="newpass">
+          <th>新密码</th>
+          <td><input type="password" value="" id="pass1"></td>
+        </tr>
+        <tr id="conpass">
+          <th>密码确认</th>
+          <td><input type="password" value="" id="pass2"></td>
+        </tr>
+        <tr>
+          <th>定制首页</th>
+          <td><select disabled="disabled" id="priset" style = "background-color:#EBEBE4;">
+                      <option value="应急预案">应急预案</option>
+                      <option value="客户档案">客户档案</option>
+                      <option value="部门维护">部门维护</option>
+                      <option value="设备资料">设备资料</option>
+                      <option value="系统字典">系统字典</option>
+                      <option value="动能设备">动能设备</option>
+                      <option value="动能停送申请">动能停送申请</option>
+                      <option value="动能专家">动能专家</option>
+          </select></td>
+        </tr>
+        <tr id="phone-num">
+          <th>手机号码</th>
+          <td><input type="text" value="469846513" disabled="disabled"></td>
+        </tr>
+        <tr>
+          <th>备注</th>
+          <td><textarea disabled="disabled" id="note"></textarea></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="main-fun">
+      <button id="chg-rec" onclick="recbutton()">修改记录</button>
+      <button id="chg-pas" onclick="pasbutton()">修改密码</button>
+    </div>
+  </div>
+  </div>
+</body>
+</html>
